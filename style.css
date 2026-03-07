@@ -7,4 +7,9 @@ body{
 .aperture{
     width: 3.125rem;
     height: 3.125rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ECE4FF;
+    border-radius: 100%;
 }
