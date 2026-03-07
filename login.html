@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./assets/github-logo.png" type="image/x-icon">
-    <title>GitHub Issues Tracker</title>
+    <title>Login - GitHub Issues Tracker</title>
     <!-- Tailwind & daisyUI CDN -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -16,7 +16,41 @@
      <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <h1 class="text-3xl font-bold text-center">Hello kazol</h1>
+    <main class="container w-full h-screen mx-auto flex justify-center items-center p-5">
+        <div class="login-wrapper w-full max-w-[32.5rem] bg-white flex flex-col gap-6 drop-shadow-lg rounded-lg">
+            <!-- icon & title -->
+            <div class="flex flex-col items-center px-5 pt-8">
+                <img class="mb-6" src="./assets/github-logo.png" alt="logo">
+                <h1 class="text-2xl font-semibold mb-1 text-[#1F2937]">GitHub Issues Tracker</h1>
+                <p class="text-base text-[#64748B]">Sign in to manage your issues</p>
+            </div>
+            <!-- login form -->
+            <div class="">
+                <div class="card-body px-8 pt-0 pb-8 gap-6">
+                        <fieldset class="fieldset">
+                        <label class="label text-[#1F2937] text-base font-medium mb-2">Username</label>
+                        <input type="text" class="input w-full h-12 rounded-lg mb-4" placeholder="Enter Username" />
+                        <label class="label text-[#1F2937] text-base font-medium mb-2">Password</label>
+                        <input type="password" class="input w-full h-12 rounded-lg" placeholder="Enter Password" />
+                        <button class="btn btn-primary btn-lg text-base font-semibold mt-6 rounded-lg">Sign In</button>
+                        </fieldset>
+                        <!-- demo credentials -->
+                    <div class="flex items-center gap-2">
+                        <div class="bg-[#E4E4E7] w-full h-[1px]"></div>
+                        <div class=" text-base text-[#1F2937]">OR</div>
+                        <div class="bg-[#E4E4E7] w-full h-[1px]"></div>
+                    </div>
+                    <div class="w-full flex flex-col items-center">
+                        <p class="text-sm text-[#64748B] mb-2">Demo Credentials:</p>
+                        <div class="w-full text-center bg-[#F8FAFC] p-6 rounded-lg">
+                            <h3 class="text-[#1F2937] text-base"><strong>Username:</strong> admin</h3>
+                            <h3 class="text-[#1F2937] text-base"><strong>Password:</strong> admin123</h3>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        </div>
+    </main>
 
     <script src="./index.js"></script>
 </body>

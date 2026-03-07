@@ -1,3 +1,10 @@
 *{
     font-family: "Geist", sans-serif;
 }
+body{
+    background-color: #F8FAFC;
+}
+.aperture{
+    width: 3.125rem;
+    height: 3.125rem;
+}
