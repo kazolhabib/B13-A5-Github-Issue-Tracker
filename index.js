@@ -41,7 +41,7 @@ async function fetchAllIssues() {
 
 //Fetch All Data
 async function fetchIssue(id) {
-    loadingSpinner(true);
+    // loadingSpinner(true);
     try {
         const res = await fetch(`https://phi-lab-server.vercel.app/api/v1/lab/issue/${id}`);
         const data = await res.json();
@@ -51,7 +51,7 @@ async function fetchIssue(id) {
         console.error("Fetch Error:", err);
         document.getElementById('issuesContainer').innerHTML = `<p class="text-red-500 text-center col-span-full">Failed to load data.</p>`;
     } finally {
-        loadingSpinner(false);
+        // loadingSpinner(false);
     }
 };
 
