@@ -1,21 +1,40 @@
 let allData = [];
+
 const issueDetails = document.getElementById('issueDetails');
 
 // Sign in Function
-document.getElementById("sign-in-btn").addEventListener("click", function(){
-    const userName = document.getElementById("user-name");
-    const userValue = userName.value;
-    console.log(userValue)
+// document.getElementById("sign-in-btn").addEventListener("click", function(){
+//     const userInput = document.getElementById("user-name");
+//     const userValue = userInput.value;
 
-    const inputPassword = document.getElementById("password");
-    const password = inputPassword.value;
-    console.log(password)
+//     const inputPassword = document.getElementById("password");
+//     const userPassword = inputPassword.value;
 
-    if (userValue == "admin" && password == "admin123"){
-        alert("hi log in succes");
-    } else {
-        alert("Sign In Failed");
-        return;
+//     if (userValue == "admin" && userPassword == "admin123"){
+//         window.location.href = "./home.html";
+//     } else {
+//         alert("Sign In Failed");
+//         return;
+//     }
+// });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const signInBtn = document.getElementById("sign-in-btn");
+    
+    if (signInBtn) {
+        signInBtn.addEventListener("click", function(event) {
+            event.preventDefault(); 
+            
+            const userValue = document.getElementById("user-name").value;
+            const userPassword = document.getElementById("password").value;
+
+            if (userValue === "admin" && userPassword === "admin123") {
+                localStorage.setItem("isLoggedIn", "true");
+                window.location.href = "./home.html";
+            } else {
+                alert("Sign In Failed!");
+            }
+        });
     }
 });
 
