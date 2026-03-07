@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //Fetch All Data
 async function fetchAllIssues() {
-    toggleLoading(true);
+    loadingSpinner(true);
     try {
         const res = await fetch('https://phi-lab-server.vercel.app/api/v1/lab/issues');
         const data = await res.json();
@@ -35,13 +35,13 @@ async function fetchAllIssues() {
         console.error("Fetch Error:", err);
         document.getElementById('issuesContainer').innerHTML = `<p class="text-red-500 text-center col-span-full">Failed to load data.</p>`;
     } finally {
-        toggleLoading(false);
+        loadingSpinner(false);
     }
 };
 
 //Fetch All Data
 async function fetchIssue(id) {
-    toggleLoading(true);
+    loadingSpinner(true);
     try {
         const res = await fetch(`https://phi-lab-server.vercel.app/api/v1/lab/issue/${id}`);
         const data = await res.json();
@@ -51,7 +51,7 @@ async function fetchIssue(id) {
         console.error("Fetch Error:", err);
         document.getElementById('issuesContainer').innerHTML = `<p class="text-red-500 text-center col-span-full">Failed to load data.</p>`;
     } finally {
-        toggleLoading(false);
+        loadingSpinner(false);
     }
 };
 
@@ -212,7 +212,7 @@ function filterIssues(status) {
     }
 };
 
-function toggleLoading(show) {
+function loadingSpinner(show) {
     document.getElementById('loading').classList.toggle('hidden', !show);
     document.getElementById('issuesContainer').classList.toggle('hidden', show);
 };
