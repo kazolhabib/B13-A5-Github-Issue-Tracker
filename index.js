@@ -1,6 +1,24 @@
 let allData = [];
 const issueDetails = document.getElementById('issueDetails');
 
+// Sign in Function
+document.getElementById("sign-in-btn").addEventListener("click", function(){
+    const userName = document.getElementById("user-name");
+    const userValue = userName.value;
+    console.log(userValue)
+
+    const inputPassword = document.getElementById("password");
+    const password = inputPassword.value;
+    console.log(password)
+
+    if (userValue == "admin" && password == "admin123"){
+        alert("hi log in succes");
+    } else {
+        alert("Sign In Failed");
+        return;
+    }
+});
+
 //Fetch All Data
 async function fetchAllIssues() {
     toggleLoading(true);
