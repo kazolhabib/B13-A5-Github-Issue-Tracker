@@ -51,7 +51,7 @@ async function fetchIssue(id) {
         console.error("Fetch Error:", err);
         document.getElementById('issuesContainer').innerHTML = `<p class="text-red-500 text-center col-span-full">Failed to load data.</p>`;
     } finally {
-        // loadingSpinner(false);
+        loadingSpinner(false);
     }
 };
 
