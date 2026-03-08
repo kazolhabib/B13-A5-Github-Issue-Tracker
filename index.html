@@ -14,6 +14,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
     <!-- Style -->
      <link rel="stylesheet" href="./style.css">
+
+   <script>
+    // If the user is ALREADY logged in, skip the login page and go home
+    if (localStorage.getItem("isLoggedIn") === "true") {
+        window.location.href = "./home.html";
+    }
+</script>
+
 </head>
 <body>
     <main class="container w-full h-screen mx-auto flex justify-center items-center p-5">
